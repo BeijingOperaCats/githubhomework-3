@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+}
+
+section{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: url(./image/th.jpeg)no-repeat;
+    background-size:cover;
+    background-position: center;
+}
+
+header{
+    position: relative;
+    top: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo{
+    /* 给logo这个类型的代码添加美化 */
+    position: relative;
+    /* 没什么反应 */
+    color:#000;
+    /* logo函数里面的Logo变成了黑色 */
+    font-size: 30px;
+    /* 把Logo放大到了（或者变成）30px大小 */
+    text-decoration: none;
+    /* 删除掉了超链接自带的下划线 */
+    text-transform: uppercase;
+    /* 貌似把里面的字母全改成大写 */
+    font-weight: 800;
+    /* 加粗到800 */
+    letter-spacing: 1px;
+    /* 字母之间的间隔多了1px隔开 */
+}
+
+header .navigation a{
+    color: #000;
+    /* 将navigation包含的代码改成黑色 */
+    /* background: #fff; （已被改到第72行代码）*/
+    /* 给navigation里的字幕添加一层背景（白色的） */
+    text-decoration: none;
+    /* 下划线去掉 */
+    font-weight: 500;
+    /* 加粗 */
+    letter-spacing: 1px;
+    /* 添加1px像素，字母间的间隔 */
+    padding: 2px 15px;
+    /* 添加单词之间的间隔，第一个2px默认控制着高度，第二个15px默认控制着宽度 */
+    border-radius: 20px;
+    /* 貌似是给单词的背景添加四角圆弧 */
+    transition: 0.3s;
+    /* 将单词的背景显现添加淡出效果 */
+    transition-property: background;
+}
+
+header .navigation a:not(:last-child){
+    margin-right: 30px;
+}
+
+header .navigation a:hover{
+    background: #fff;
+    /* 已经将53行代码的剪切过来；理由时将一直显示的背景（白色）更换成鼠标悬停后才显示出来 */
+}
+
+.content{
+    max-width: 650px;
+    /* 给content里面的函数（在此案例为简介）设置最大宽度 */
+    margin: 60px 100px;
+     /* 貌似是给简介背景塞上一个宽  高  限制区域？ */
+}
+
+.content .info h2{
+    color: #226a80;
+    font-size: 55px;
+    /* 变大？ */
+    text-transform: uppercase;
+    /* 全员大写 */
+    font-weight: 800;
+    /* 加粗 */
+    letter-spacing: 2px;
+    /* 单词之间添加间隙 */
+    line-height: 60px;
+    /* 上下单词之间有60px的间隙（已确认不是在原有的基础上隔开，而是想多远有多远，设置的数值过小可重叠） */
+    margin-bottom: 30px;
+    /* 给总单词的最下端添加30px高度？ */
+}
+
+.content .info h2 span{
+    color: #fff;
+    /* 给h2标签中的span标签添加一个文字变白的效果 */
+    font-size: 50px;
+    /* 控制span标签内文字的大小 */
+    font-weight: 600;
+    /* 改变字体粗度 */
+}
+
+.content .info p{
+    font-size: 16px;
+    /* p标签（简介）的所有字体大小 */
+    font-weight: 500;
+    /* 改变粗度 */
+    margin-bottom: 40px;
+    /* 添加最下端40px的高度间隔 */
+}
+
+.content .info-btn{
+    /* 修改有info-btn类标签的超链接步骤 */
+    color: #fff;
+    /* 必先改其颜色 */
+    background: #226a80;
+    /* 加其背景颜料 */
+    text-decoration: none;
+    /* 删其下划线 */
+    text-transform: uppercase;
+    /* 而后全部大写 */
+    font-weight: 700;
+    /* 改其粗度 */
+    letter-spacing: 2px;
+    /* 加其字母间隔 */
+    padding: 10px 20px;
+    /* 背景则需改宽换高 */
+    border-radius: 5px;
+    /* 最后磨圆背景的四角，即可完成 */
+    transition: 0.3s;
+    /* 添加悬停后改变完颜色之间的一个过渡时间 */
+    transition-property: background;
+    /* 翻译该属性意思是过渡属性，不懂啥意思 */
+}
+
+.content .info-btn:hover{
+    background: #0c4f60;
+    /* 鼠标悬停在info-btn分类的代码后，可改变颜色 */
+}
+
+.media-icons{
+    display: flex;
+    /* 直译是柔性，改变的是脸书，推特和某个相机图标的软件 */
+    justify-content: center;
+    /* center直译是中央，目测是让其居中的意思 */
+    align-items: center;
+    /* align-items的直译是对齐目标，暂没明显改变 */
+    margin: auto;
+    /* margin直译是利润，但又有余量, 幅度, 边, 差额, 余地, 边沿, 涯, 塝, 埸, 页边的意思，目测是自动根据上下文的空隙来更加对齐居中 */
+}
+
+.media-icons a{
+    position: relative;
+    /* 改变三个社交平台logo的位置，具体变动不详 */
+    color: #111;
+    font-size: 25px;
+    /* 改变大小 */
+    transition: 0.3s;
+    /* 让三个图标在鼠标悬停时增加一个淡入淡出的过渡 */
+    transition-property: transform;
+    /* 直译：过渡属性的变换，具体作用尚不明确 */
+}
+
+.media-icons a:not(last-child){
+    margin-right: 60px;
+    /* 目测是改变了三个图标的间隙，但不清楚描点在哪 */
+
+}
+
+.media-icons a:hover{
+    transform: scale(1.5);
+    /* 直译：改变规模到1.5；实际作用是鼠标悬停在三个图标上面时，会改变大小 */
+}
+
+label{
+    display: none;
+    /* 让两个html的三横杠和X图标消失掉了（应该并没彻底删除） */
+}
+
+#check{
+    z-index: 3;
+    display: none;
+    /* 将打钩的按钮隐藏掉 */
+}
+
+/* Responsive styles */
+
+/* 以下代码开始出现bug，具体就是home about info 这段代码并未如期消失 */
+@media (max-width: 1300px){
+    /* 以上代码现已经解决，案例是960px，但当调高至1286px之后将正常消失；为了整数改成了1300px */
+    header .navigation{
+        display: none;
+    }
+
+    label{
+        display: block;
+        /* 添加了在home之类的东西删除后，增加了三杠一X */
+        font-size: 25px;
+        /* 改变三杠一X的大小 */
+        cursor: pointer;
+        /* 加入代码刷新后并无变化；直译为：游标指针 */
+        transition: 0.3s;
+        /* 让三杠一X在鼠标悬停时，有个变白的过程 */
+        transition-property: color;
+    }
+
+    label:hover{
+        color: #fff;
+    }
+
+    label .close-btn{
+        display: none;
+        /* 让X消失了 */
+    }
+
+    #check:checked ~ header .navigation{
+        z-index: 2;
+        position: fixed;
+        background: rgba(114,223,255,0.9);
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        /* 以上这段代码添加了打开旁边的方框打钩后的：背景（back...）位置（left right）等等 */
+        flex-direction: column;
+        /* 将每个单词自动换行（大概） */
+        justify-content: center;
+        /* 将单词的高度（大概）居中 */
+        align-items: center;
+        /* 将单词的横向描点居中（大概） */
+    }
+
+    #check:checked ~ header .navigation a{
+        font-weight: 700;
+        /* 加粗字体 */
+        margin-right: 0;
+        /* 无法语言描述其效果，只能证明出任意负数-0-任意正数三种变化 */
+        margin-bottom: 50px;
+        /* 目测添加了字母上下之间的间隔 */
+        letter-spacing: 2px;
+        /* 改变字母之间的间隔 */
+    }
+
+    #check:checked ~ header label .menu-btn{
+        display: none;
+        /* 添加的该代码之后将跳到二级页面时让三个横杠消失掉 */
+    }
+
+    #check:checked ~ header label .close-btn{
+        z-index: 2;
+        display: block;
+        position: fixed;
+        /* 添加了以上的代码后，将之前隐藏掉的X图标在二级页面显示，并有着关闭二级页面的功能 */
+    }
+
+    label .menu-btn{
+        position: absolute;
+        /* 改变了三个杠的位置？貌似会牵扯到其他的蝴蝶效应 */
+    }
+
+    header .logo{
+        position: absolute;
+        bottom: -6px;
+        /* 更改了LOGO的位置 */
+    }
+
+    .content .info h2 span {
+        font-size: 40px;
+        /* 改变了h2标题的大小 */
+        font-weight: 600;
+        /* 粗度 */
+    }
+
+    .content .info p{
+        font-size: 14px;
+        /* 简介字体大小 */
+
+    }
+}
+
+@media (max-width:560px){
+    .content .info h2{
+        font-size: 35px;
+        line-height: 40px;
+    }
+
+    .content .info h2 span{
+        font-size: 30px;
+        font-weight: 600;
+    }
+
+    .content .info p{
+        font-size: 14px;
+    }
+}
